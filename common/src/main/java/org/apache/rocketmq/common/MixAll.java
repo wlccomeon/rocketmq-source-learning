@@ -324,6 +324,11 @@ public class MixAll {
         return properties;
     }
 
+    /**
+     * 将properties中存储的键值对赋值给object中对应key的值
+     * @param p
+     * @param object
+     */
     public static void properties2Object(final Properties p, final Object object) {
         Method[] methods = object.getClass().getMethods();
         for (Method method : methods) {
