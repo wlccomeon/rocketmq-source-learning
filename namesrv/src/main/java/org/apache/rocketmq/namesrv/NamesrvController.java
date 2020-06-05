@@ -74,7 +74,7 @@ public class NamesrvController {
     }
 
     public boolean initialize() {
-
+        //加载配置文件内容
         this.kvConfigManager.load();
         //初始化RocketMQ自己封装的远程通信服务器，其中关键一点就是初始化Netty服务器
         this.remotingServer = new NettyRemotingServer(this.nettyServerConfig, this.brokerHousekeepingService);

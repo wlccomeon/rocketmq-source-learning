@@ -19,7 +19,7 @@ package org.apache.rocketmq.remoting.netty;
 public class NettyServerConfig implements Cloneable {
     /**nettyServer默认监听的端口号，在NameSrvController中被替换成了9876*/
     private int listenPort = 8888;
-    /**工作线程数*/
+    /**netty工作线程数*/
     private int serverWorkerThreads = 8;
     /**Netty的public线程池的线程数，默认为0*/
     private int serverCallbackExecutorThreads = 0;

@@ -65,6 +65,7 @@ import org.apache.rocketmq.remoting.protocol.RemotingCommand;
 
 public class NettyRemotingServer extends NettyRemotingAbstract implements RemotingServer {
     private static final InternalLogger log = InternalLoggerFactory.getLogger(RemotingHelper.ROCKETMQ_REMOTING);
+    /**Netty服务端用于应用程序网络配置的容器*/
     private final ServerBootstrap serverBootstrap;
     private final EventLoopGroup eventLoopGroupSelector;
     private final EventLoopGroup eventLoopGroupBoss;
@@ -84,6 +85,7 @@ public class NettyRemotingServer extends NettyRemotingAbstract implements Remoti
     private static final String FILE_REGION_ENCODER_NAME = "fileRegionEncoder";
 
     // sharable handlers
+    /**handshakeHandler负责连接握手*/
     private HandshakeHandler handshakeHandler;
     private NettyEncoder encoder;
     private NettyConnectManageHandler connectionManageHandler;

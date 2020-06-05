@@ -35,6 +35,7 @@ if [ -z "$ROCKETMQ_HOME" ] ; then
   ROCKETMQ_HOME=`dirname "$PRG"`/..
 
   # make it fully qualified
+  # 获取ROCKETMQ_HOME的绝对路径，&& pwd表示前一个命令cd执行完毕之后立即执行
   ROCKETMQ_HOME=`cd "$ROCKETMQ_HOME" && pwd`
 
   cd "$saveddir"
